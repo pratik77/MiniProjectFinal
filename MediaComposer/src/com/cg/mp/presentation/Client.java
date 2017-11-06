@@ -368,6 +368,8 @@ public class Client {
 								List<ComposerMasterDTO>composerList=new ArrayList();
 								try {
 									composerList=songService.showAllComposerDetails();
+									ComposerMasterDTO composer = new ComposerMasterDTO();
+									composer.disp();
 									for(ComposerMasterDTO composerMasterDTOList:composerList)
 										System.out.println(composerMasterDTOList);
 								} catch (SongException e) {

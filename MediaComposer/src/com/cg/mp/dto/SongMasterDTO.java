@@ -13,8 +13,8 @@ public class SongMasterDTO
 	private int updatedBy;
 	private Date updatedOn;
 	private int songDelFlag;
-	
-	
+
+
 	public SongMasterDTO() {
 		super();
 	}
@@ -83,5 +83,18 @@ public class SongMasterDTO
 		// TODO Auto-generated method stub
 		return "Song Id: "+songId+" Song Name: "+songName+" Song Duration: "+songDuration;
 	}
-	
+
+	public void disp()
+	{
+		System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.printf("%-30s%-30s%-30s%-30s%-30s%-30s%-30s\n","Song ID","Song Name","Song Duration","Created By","Created On","Updated By","Updated On");
+		System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+	}
+	@Override
+	public String toString() {
+
+		return String.format("%-30s%-30s%-30s%-30s%-30s%-30s%-30s", songId, songName, songDuration,createdBy,createdOn,updatedBy,updatedOn);
+
+	}
+
 }

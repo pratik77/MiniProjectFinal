@@ -15,13 +15,15 @@ public class ComposerMasterDTO
 	private int updatedBy;
 	private Date updatedOn;
 	private int composerDelFlag;
+	public void disp()
+	{
+		System.out.println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.printf("%-30s%-30s%-30s%-30s%-30s%-30s%-30s%-30s%-30s%-30s%-30s\n","ComposerId","Composer Name","Born Date","Died Date","Caeipi No.","MusicSoc ID","createdBy","Created On","UpdatedBy","Updated On","Del Flag");
+		System.out.println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+	}
 	@Override
 	public String toString() {
-		return "Composer Details of composerId=" + composerId + "[ composerName=" + composerName + ", composerBornDate="
-				+ composerBornDate + ", composerDiedDate=" + composerDiedDate + ", composerCaeipiNumber="
-				+ composerCaeipiNumber + ", composerMusicSocId=" + composerMusicSocId + ", createdBy=" + createdBy
-				+ ", createdOn=" + createdOn + ", updatedBy=" + updatedBy + ", updatedOn=" + updatedOn
-				+ ", composerDelFlag=" + composerDelFlag + "]";
+		return String.format("%-30s%-30s%-30s%-30s%-30s%-30s%-30s%-30s%-30s%-30s%-30s", composerId, composerName, composerBornDate,composerDiedDate,composerCaeipiNumber,composerMusicSocId,createdBy,createdOn,updatedBy,updatedOn,composerDelFlag);
 	}
 	public int getComposerId() {
 		return composerId;

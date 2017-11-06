@@ -61,4 +61,6 @@ public interface ISongService {
 	String artistSongAssoc(ArtistSongAssoc artistSongAssoc, int userId) throws SongException;
 	
 	public boolean checkSongDuration(String songDuration);
+	
+	List<SongMasterDTO> showAllSongDetails() throws SongException;
 	}

@@ -201,6 +201,12 @@ public class ClientMain {
 								clientSongs.clientSongsTest(choice3, userId);
 								
 								break;
+								
+								/***************case for showing songs********************/
+							case 14:
+								clientSongs.clientSongsTest(choice3, userId);
+								
+								break;
 					
 								/***************default case for admin menu********************/
 							default:

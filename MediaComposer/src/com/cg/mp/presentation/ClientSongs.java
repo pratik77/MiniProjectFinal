@@ -1,6 +1,8 @@
 package com.cg.mp.presentation;
 
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import com.cg.mp.dto.ArtistSongAssoc;
@@ -112,6 +114,18 @@ public class ClientSongs {
 						}
 						break;
 
+					case 14:
+						List<SongMasterDTO> songList=new ArrayList();
+						SongMasterDTO song = new SongMasterDTO();
+						try {
+							song.disp();
+							songList=songService.showAllSongDetails();
+							for(SongMasterDTO songMasterDTOList:songList)
+								System.out.println(songMasterDTOList);
+						} catch (SongException e) {
+							System.out.println(e.getMessage());
+						}
+						break;
 					}
 
 

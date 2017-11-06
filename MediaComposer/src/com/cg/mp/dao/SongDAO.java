@@ -5,6 +5,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 
@@ -243,5 +245,45 @@ public class SongDAO implements ISongDAO {
 		}
 		return "Artist and Song associated successfully";
 
+	}
+
+	@Override
+	public List<SongMasterDTO> showAllSongDetails() throws SongException 
+	{
+		Connection connection=null;
+		Statement stmt=null;
+		List<SongMasterDTO> songList=new ArrayList();
+		try
+		{
+			connection=DBUtil.createConnection();
+			stmt = connection.createStatement();
+			String sqlRetrieve=new String("SELECT * FROM song_master");
+			ResultSet rsetList=stmt.executeQuery(sqlRetrieve);
+			while(rsetList.next())
+			{
+				SongMasterDTO songMasterDTO=new SongMasterDTO();
+				songMasterDTO.setSongName(rsetList.getString(2));
+				songMasterDTO.setSongDuration(rsetList.getString(3));
+				songMasterDTO.setCreatedBy(rsetList.getInt(4));
+				songMasterDTO.setCreatedOn(rsetList.getDate(5));
+				songMasterDTO.setUpdatedBy(rsetList.getInt(6));
+				songMasterDTO.setUpdatedOn(rsetList.getDate(7));
+				songList.add(songMasterDTO);
+			}
+			logger.info("Song details retrieved Successfully.");
+		}catch(SQLException se)
+		{
+			throw new SongException(se.getMessage()+" and problem in retrieving Song list.");
+		}finally
+		{
+			try
+			{
+				DBUtil.closeConnection();
+			}catch(SQLException se)
+			{
+				throw new SongException("Problems in closing connection.",se);
+			}
+		}
+		return songList;
 	}
 }

@@ -13,3 +13,55 @@
 2017-11-06 00:27:32,539 INFO [com.cg.mp.dao.ComposerDAO] - Composer added with Id: 100029
 2017-11-06 00:27:32,570 INFO [com.cg.mp.dao.ArtistDAO] - Artist Added successfully with ID: 11
 2017-11-06 00:27:32,586 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 10:26:31,720 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 10:32:13,631 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 10:32:15,567 INFO [com.cg.mp.dao.SongDAO] - Song details retrieved Successfully.
+2017-11-06 10:39:28,251 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 10:39:30,186 INFO [com.cg.mp.dao.SongDAO] - Song details retrieved Successfully.
+2017-11-06 10:41:55,032 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 10:42:00,277 INFO [com.cg.mp.dao.SongDAO] - Song details retrieved Successfully.
+2017-11-06 10:43:53,171 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 10:44:14,630 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 10:44:34,134 INFO [com.cg.mp.dao.SongDAO] - Song details retrieved Successfully.
+2017-11-06 10:45:26,455 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 10:45:28,391 INFO [com.cg.mp.dao.SongDAO] - Song details retrieved Successfully.
+2017-11-06 10:48:26,534 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 10:48:28,595 INFO [com.cg.mp.dao.SongDAO] - Song details retrieved Successfully.
+2017-11-06 11:07:06,064 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 11:07:07,922 INFO [com.cg.mp.dao.SongDAO] - Song details retrieved Successfully.
+2017-11-06 11:09:00,640 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 11:09:03,497 INFO [com.cg.mp.dao.SongDAO] - Song details retrieved Successfully.
+2017-11-06 11:16:44,593 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 11:16:46,545 INFO [com.cg.mp.dao.SongDAO] - Song details retrieved Successfully.
+2017-11-06 11:24:55,015 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 11:24:56,686 INFO [com.cg.mp.dao.SongDAO] - Song details retrieved Successfully.
+2017-11-06 12:03:33,776 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 12:03:35,606 INFO [com.cg.mp.dao.SongDAO] - Song details retrieved Successfully.
+2017-11-06 12:05:59,400 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 12:06:01,026 INFO [com.cg.mp.dao.SongDAO] - Song details retrieved Successfully.
+2017-11-06 12:07:17,628 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 12:07:20,082 INFO [com.cg.mp.dao.SongDAO] - Song details retrieved Successfully.
+2017-11-06 12:08:45,101 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 12:08:46,928 INFO [com.cg.mp.dao.SongDAO] - Song details retrieved Successfully.
+2017-11-06 12:09:55,547 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 12:09:57,095 INFO [com.cg.mp.dao.SongDAO] - Song details retrieved Successfully.
+2017-11-06 12:19:28,157 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 12:19:31,418 INFO [com.cg.mp.dao.ComposerDAO] - Composer details retrieved Successfully.
+2017-11-06 12:26:38,965 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 12:26:40,572 INFO [com.cg.mp.dao.ComposerDAO] - Composer details retrieved Successfully.
+2017-11-06 12:36:16,907 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 12:36:26,318 INFO [com.cg.mp.dao.ArtistDAO] - Artist details successfully retrieved.
+2017-11-06 12:37:54,463 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 12:37:57,523 INFO [com.cg.mp.dao.ArtistDAO] - Artist details successfully retrieved.
+2017-11-06 12:38:51,399 INFO [com.cg.mp.dao.ArtistDAO] - Artist details successfully retrieved.
+2017-11-06 12:39:05,260 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 12:39:08,524 INFO [com.cg.mp.dao.ArtistDAO] - Artist details successfully retrieved.
+2017-11-06 12:39:27,933 INFO [com.cg.mp.dao.ComposerDAO] - Composer details retrieved Successfully.
+2017-11-06 12:40:06,751 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 12:40:11,261 INFO [com.cg.mp.dao.ComposerDAO] - Composer details retrieved Successfully.
+2017-11-06 12:40:45,211 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 12:40:51,142 INFO [com.cg.mp.dao.ComposerDAO] - Composer details retrieved Successfully.
+2017-11-06 12:41:29,032 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 12:41:30,609 INFO [com.cg.mp.dao.ComposerDAO] - Composer details retrieved Successfully.
+2017-11-06 12:41:53,445 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 12:42:08,835 INFO [com.cg.mp.dao.SongDAO] - Song details retrieved Successfully.

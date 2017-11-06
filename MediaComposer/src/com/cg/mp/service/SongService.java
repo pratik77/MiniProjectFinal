@@ -197,5 +197,10 @@ public class SongService implements ISongService {
 			return false;
 		}
 	}
+
+	@Override
+	public List<SongMasterDTO> showAllSongDetails() throws SongException {
+		return songDAO.showAllSongDetails();
+	}
 	
 }

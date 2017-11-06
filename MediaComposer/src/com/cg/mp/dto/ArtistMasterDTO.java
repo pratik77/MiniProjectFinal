@@ -13,6 +13,16 @@ public class ArtistMasterDTO {
 	private int updatedBy;
 	private Date updatedOn;
 	private int artistDelFlag;
+	public void disp()
+	{
+		System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.printf("%-30s%-30s%-30s%-30s%-30s%-30s%-30s%-30s%-30s%-30s\n","Artist Id","Artist Name","Artist Type","Born Date","Died Date","createdBy","Created On","UpdatedBy","Updated On","Del Flag");
+		System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+	}
+	@Override
+	public String toString() {
+		return String.format("%-30s%-30s%-30s%-30s%-30s%-30s%-30s%-30s%-30s%-30s", artistId, artistName, artistType,artistBornDate,artistDiedDate,createdBy,createdOn,updatedBy,updatedOn,artistDelFlag);
+	}
 	public int getArtistId() {
 		return artistId;
 	}
@@ -92,7 +102,7 @@ public class ArtistMasterDTO {
 		this.updatedOn = updatedOn;
 		this.artistDelFlag = artistDelFlag;
 	}
-	@Override
+	/*@Override
 	public String toString() {
 		return "Artist Details of "+artistId+" [ artistName="
 				+ artistName + ", artistType=" + artistType
@@ -100,6 +110,6 @@ public class ArtistMasterDTO {
 				+ artistDiedDate + ", createdBy=" + createdBy + ", createdOn="
 				+ createdOn + ", updatedBy=" + updatedBy + ", updatedOn="
 				+ updatedOn +"]";
-	}
+	}*/
 
 }

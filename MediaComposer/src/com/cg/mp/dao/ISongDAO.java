@@ -1,5 +1,7 @@
 package com.cg.mp.dao;
 
+import java.util.List;
+
 import com.cg.mp.dto.ArtistSongAssoc;
 import com.cg.mp.dto.ComposerSongAssoc;
 import com.cg.mp.dto.SongMasterDTO;
@@ -18,5 +20,7 @@ public interface ISongDAO
 	String compSongAssoc(ComposerSongAssoc composerSongAssoc, int userId) throws SongException;
 
 	String artistSongAssoc(ArtistSongAssoc artistSongAssoc, int userId) throws SongException;
+	
+	List<SongMasterDTO> showAllSongDetails() throws SongException;
 
 }

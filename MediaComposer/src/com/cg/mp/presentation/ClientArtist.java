@@ -237,6 +237,8 @@ public class ClientArtist {
 			List<ArtistMasterDTO> artistList=new ArrayList();
 			try
 			{
+				ArtistMasterDTO artist = new ArtistMasterDTO();
+				artist.disp();
 				artistList=songService.retrieveAllArtists();
 			}
 			catch(SongException se)
