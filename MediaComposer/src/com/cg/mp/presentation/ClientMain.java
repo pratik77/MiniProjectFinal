@@ -135,7 +135,8 @@ public class ClientMain {
 							System.out.println("11. Show all Artists.");
 							System.out.println("12. Associate song/songs to an Artist.");
 							System.out.println("13. Add Songs.");
-							System.out.println("14. Logout");
+							System.out.println("14. Show all songs.");
+							System.out.println("15. Logout");
 							System.out.println("Enter choice:");
 							choice3=sc.nextInt();
 							
