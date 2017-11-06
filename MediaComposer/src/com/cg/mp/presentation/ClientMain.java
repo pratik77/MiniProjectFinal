@@ -201,11 +201,25 @@ public class ClientMain {
 								clientSongs.clientSongsTest(choice3, userId);
 								
 								break;
+								
+								/***************case for  Logout********************/
+							case 15:
+								logoutChoiceNew="a";
+								break;	
 					
 								/***************default case for admin menu********************/
 							default:
 								System.out.println("Please enter a valid choice.");
 								break;
+								
+								if(logoutChoiceNew.equals("a"))
+									logoutChoiceNew="";
+								else
+								{
+								System.out.println("Want to continue (y/n)");
+								choice5=sc.next().charAt(0);
+								count=0;
+								}
 
 							}
 							System.out.println("Want to continue (y/n)");
@@ -272,15 +286,22 @@ public class ClientMain {
 								}
 								break;
 								
-								
+							case 5 :
+								logoutChoiceNew="a";
+								break;
 								/***************default case for user menu********************/
 							default:
 								System.out.println("Please enter a valid choice.");
 								break;
 							}
+							if(logoutChoiceNew.equals("a"))
+								logoutChoiceNew="";
+							else
+							{
 							System.out.println("Want to continue (y/n)");
 							choice5=sc.next().charAt(0);
 							count=0;
+							}
 							
 							/***************end of do while loop for user menu********************/
 						}while(choice5 =='y' || choice5=='Y');
