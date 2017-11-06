@@ -238,19 +238,18 @@ public class ClientMain {
 								clientSongs.clientSongsTest(choice3, userId);
 								
 								break;
-								
-<<<<<<< HEAD
+
 								/***************case for showing songs********************/
 							case 14:
 								clientSongs.clientSongsTest(choice3, userId);
 								
 								break;
-=======
+
 								/***************case for  Logout********************/
 							case 15:
 								logoutChoiceNew="a";
 								break;	
->>>>>>> d754d04e54227989490ec2bc533cb1bcd88443d7
+
 					
 								/***************default case for admin menu********************/
 							default:
