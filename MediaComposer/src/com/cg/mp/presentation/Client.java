@@ -42,6 +42,7 @@ public class Client {
 		String artistBorn,artistName,artistDeathStatus,artistDied,artistType;
 		Date artistBornDate=null;
 		Date artistDiedDate=null;
+		String stringCheck="";
 		/************************************************************************************/
 		
 		/**********************Regex pattern initialization*******************/
@@ -197,8 +198,25 @@ public class Client {
 								
 								/***************case for searching composer********************/
 							case 2:
-								System.out.println("Enter composer id:");
-								composerId=sc.nextInt();
+								do
+								{
+									System.out.println("Enter  composer Id: ");
+									stringCheck=sc.next()+sc.nextLine();
+									choice7="";
+								//	if(Pattern.matches(patternName,composerName)==false)
+									if(stringCheck.matches("^[0-9]{1,6}$")==false)
+									{
+										try
+										{
+											throw new SongException("Please enter a valid composer Id. Only numeric value allowed max upto 6 digits.");
+										}catch(SongException e)
+										{
+											System.out.println(e.getMessage());
+											choice7="again";
+										}
+								}
+								}while(choice7=="again");
+								composerId=Integer.parseInt(stringCheck);
 								try {
 									composerMasterDTO=songService.getComposerById(composerId);
 									if(composerMasterDTO.getComposerName()==null)
@@ -224,8 +242,25 @@ public class Client {
 								
 								/***************case for editing composer details********************/
 							case 3:
-								System.out.println("Enter the composer Id you want to edit: ");
-								composerId=sc.nextInt();
+								do
+								{
+									System.out.println("Enter  composer Id: ");
+									stringCheck=sc.next()+sc.nextLine();
+									choice7="";
+								//	if(Pattern.matches(patternName,composerName)==false)
+									if(stringCheck.matches("^[0-9]{1,6}$")==false)
+									{
+										try
+										{
+											throw new SongException("Please enter a valid composer Id. Only numeric value allowed max upto 6 digits.");
+										}catch(SongException e)
+										{
+											System.out.println(e.getMessage());
+											choice7="again";
+										}
+								}
+								}while(choice7=="again");
+								composerId=Integer.parseInt(stringCheck);
 								
 								ComposerMasterDTO composerMasterDTOEdit=null;
 								try {
@@ -352,8 +387,25 @@ public class Client {
 								
 								/****************Case for deleting composer details********************/
 							case 4:
-								System.out.println("Enter the composer Id you want to delete: ");
-								composerId=sc.nextInt();
+								do
+								{
+									System.out.println("Enter  composer Id: ");
+									stringCheck=sc.next()+sc.nextLine();
+									choice7="";
+								//	if(Pattern.matches(patternName,composerName)==false)
+									if(stringCheck.matches("^[0-9]{1,6}$")==false)
+									{
+										try
+										{
+											throw new SongException("Please enter a valid composer Id. Only numeric value allowed max upto 6 digits.");
+										}catch(SongException e)
+										{
+											System.out.println(e.getMessage());
+											choice7="again";
+										}
+								}
+								}while(choice7=="again");
+								composerId=Integer.parseInt(stringCheck);
 								try {
 									songService.deleteComposerDetails(composerId);
 								} catch (Exception e) {
@@ -380,7 +432,7 @@ public class Client {
 								
 								
 								
-								/***************case for songs to a composer********************/
+								/***************case for associating songs to a composer********************/
 							case 6:
 								clientSongs.clientSongsTest(choice3,userId);
 								break;
@@ -507,8 +559,25 @@ public class Client {
 							
 							/***************case for searching an artist********************/
 							case 8:
-								System.out.println("Enter the artist Id:");
-								artistId=sc.nextInt();
+								do
+								{
+									System.out.println("Enter Artist Id: ");
+									stringCheck=sc.next()+sc.nextLine();
+									choice7="";
+								//	if(Pattern.matches(patternName,composerName)==false)
+									if(stringCheck.matches("^[0-9]{1,6}$")==false)
+									{
+										try
+										{
+											throw new SongException("Please enter a valid artistId. Only numeric value allowed max upto 6 digits.");
+										}catch(SongException e)
+										{
+											System.out.println(e.getMessage());
+											choice7="again";
+										}
+								}
+								}while(choice7=="again");
+								artistId=Integer.parseInt(stringCheck);
 								List<ArtistMasterDTO> artistMasterList=new ArrayList();
 								try {
 									artistMasterList = songService.searchArtist(artistId);
@@ -572,7 +641,7 @@ public class Client {
 											System.out.println(songMasterDTOList.displaySongsDetails());
 									}
 								} catch (SongException e) {
-									// TODO Auto-generated catch block
+									
 									System.out.println(e.getMessage());
 								}
 
