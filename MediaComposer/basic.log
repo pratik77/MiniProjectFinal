@@ -65,3 +65,27 @@
 2017-11-06 12:41:30,609 INFO [com.cg.mp.dao.ComposerDAO] - Composer details retrieved Successfully.
 2017-11-06 12:41:53,445 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
 2017-11-06 12:42:08,835 INFO [com.cg.mp.dao.SongDAO] - Song details retrieved Successfully.
+2017-11-06 14:30:09,606 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 14:32:30,819 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 14:33:28,909 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 1
+2017-11-06 14:33:34,058 INFO [com.cg.mp.dao.ComposerDAO] - User added with Id: 1
+2017-11-06 14:33:43,127 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 2
+2017-11-06 14:36:17,348 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 2
+2017-11-06 14:36:26,984 INFO [com.cg.mp.dao.ComposerDAO] - Song details retrieved successfully for Composer arijit
+2017-11-06 14:36:56,291 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 2
+2017-11-06 14:37:01,257 INFO [com.cg.mp.dao.ComposerDAO] - Song details retrieved successfully for Composer arijit
+2017-11-06 14:38:06,980 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 2
+2017-11-06 14:38:11,868 INFO [com.cg.mp.dao.ComposerDAO] - Song details retrieved successfully for Composer arijit
+2017-11-06 14:42:26,111 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 2
+2017-11-06 14:42:30,552 INFO [com.cg.mp.dao.ComposerDAO] - Song details retrieved successfully for Composer arijit
+2017-11-06 14:43:00,544 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 2
+2017-11-06 14:43:08,138 INFO [com.cg.mp.dao.ComposerDAO] - Song details retrieved successfully for Composer arijit
+2017-11-06 14:43:21,896 INFO [com.cg.mp.dao.ComposerDAO] - Song details retrieved successfully for Composer vcgfg
+2017-11-06 14:50:10,471 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 2
+2017-11-06 14:59:35,826 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 2
+2017-11-06 14:59:44,038 INFO [com.cg.mp.dao.ArtistDAO] - Song Details successfully retrieved for Artist Name vishal
+2017-11-06 15:04:18,364 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 2
+2017-11-06 15:05:00,568 INFO [com.cg.mp.dao.ComposerDAO] - Song details retrieved successfully for Composer Music Society ID: hgy
+2017-11-06 15:05:23,557 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 2
+2017-11-06 15:09:08,738 INFO [com.cg.mp.dao.ComposerDAO] - Login successfull. 2
+2017-11-06 15:09:21,708 INFO [com.cg.mp.dao.ArtistDAO] - Artist details successfully retrieved for Artist Type. M

@@ -616,7 +616,7 @@ public class Client {
 							
 						switch(choice3)
 						{
-							/***************case for searching composer by name********************/
+							/***************case for searching songs by composer name********************/
 							case 1:
 								System.out.print("Enter composer name:");
 								composerName=sc.next()+sc.nextLine();
@@ -637,6 +637,9 @@ public class Client {
 
 									else
 									{
+										System.out.println("---------------------------------------------------------------------------------");
+										System.out.printf("%-30s%-30s%-30s\n","Song ID","Song Name","Song Duration");
+										System.out.println("---------------------------------------------------------------------------------");
 										for(SongMasterDTO songMasterDTOList:songsList)
 											System.out.println(songMasterDTOList.displaySongsDetails());
 									}
@@ -648,7 +651,7 @@ public class Client {
 								break;
 								
 								
-								/***************case for searching composer by music society id********************/
+								/***************case for searching songs by music society id********************/
 							case 2:
 								System.out.print("Enter music society ID:");
 								String composerMusSocId=sc.next();
@@ -668,6 +671,9 @@ public class Client {
 
 									else
 									{
+										System.out.println("---------------------------------------------------------------------------------");
+										System.out.printf("%-30s%-30s%-30s\n","Song ID","Song Name","Song Duration");
+										System.out.println("---------------------------------------------------------------------------------");
 										for(SongMasterDTO songMasterDTOList:songsList)
 											System.out.println(songMasterDTOList.displaySongsDetails());
 									}

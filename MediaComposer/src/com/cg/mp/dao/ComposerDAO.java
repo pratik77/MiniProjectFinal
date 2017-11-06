@@ -387,8 +387,8 @@ public class ComposerDAO implements IComposerDAO {
 			stmt = connection.createStatement();
 			stmt1 = connection.createStatement();
 			String sqlSongsList=new String("SELECT * FROM song_master WHERE song_id IN "
-					+ "(SELECT song_id FROM composer_song_assoc WHERE composer_id="
-					+ "(SELECT DISTINCT composer_id FROM composer_master WHERE LOWER(composer_name)='"+lowerComposerName+"'))");
+					+ "(SELECT song_id FROM composer_song_assoc WHERE composer_id IN"
+					+ "(SELECT composer_id FROM composer_master WHERE LOWER(composer_name)='"+lowerComposerName+"'))");
 			ResultSet rsetSong=stmt1.executeQuery(sqlSongsList);
 			while(rsetSong.next())
 			{
@@ -429,7 +429,7 @@ public class ComposerDAO implements IComposerDAO {
 			stmt1 = connection.createStatement();
 			String sqlSongsList=new String("SELECT * FROM song_master WHERE song_id IN "
 					+ "(SELECT song_id FROM composer_song_assoc WHERE composer_id IN"
-					+ "(SELECT DISTINCT composer_id FROM composer_master WHERE composer_musicsocietyid='"+composerMusSocId+"'))");
+					+ "(SELECT composer_id FROM composer_master WHERE composer_musicsocietyid='"+composerMusSocId+"'))");
 			ResultSet rsetSong=stmt1.executeQuery(sqlSongsList);
 			while(rsetSong.next())
 			{

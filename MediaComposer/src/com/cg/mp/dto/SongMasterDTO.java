@@ -81,7 +81,7 @@ public class SongMasterDTO
 	}
 	public String displaySongsDetails() {
 		// TODO Auto-generated method stub
-		return "Song Id: "+songId+" Song Name: "+songName+" Song Duration: "+songDuration;
+		return String.format("%-30s%-30s%-30s\n", songId, songName, songDuration);
 	}
 
 	public void disp()

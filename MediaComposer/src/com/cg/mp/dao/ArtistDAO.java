@@ -331,7 +331,7 @@ public class ArtistDAO implements IArtistDAO{
 			
 		
 		}
-		logger.info("Artist details successfully retrieved for Artist Type. "+rset.getString(3));
+		logger.info("Artist details successfully retrieved for Artist Type. "+artistType);
 		}catch(SQLException se)
 		{
 			throw new SongException(se.getMessage()+"Please enter correct credentials.");
@@ -364,8 +364,8 @@ public class ArtistDAO implements IArtistDAO{
 		stmt = connection.createStatement();
 		stmt1 = connection.createStatement();
 		String sqlSongsList=new String("SELECT * FROM song_master WHERE song_id IN "
-				+ "(SELECT song_id FROM artist_song_assoc WHERE artist_id="
-				+ "(SELECT DISTINCT artist_id FROM artist_master WHERE LOWER(artist_name)='"+lowerArtistName+"'))");
+				+ "(SELECT song_id FROM artist_song_assoc WHERE artist_id IN"
+				+ "(SELECT artist_id FROM artist_master WHERE LOWER(artist_name)='"+lowerArtistName+"'))");
 		ResultSet rsetSong=stmt1.executeQuery(sqlSongsList);
 		while(rsetSong.next())
 		{
@@ -376,7 +376,7 @@ public class ArtistDAO implements IArtistDAO{
 			//songMasterDTO.setSongDuration(rsetSong.getTimestamp(3));
 			songsList.add(songMasterDTO);
 		}
-		logger.info("Song Details successfully retrieved for Song Name "+rset.getString(2));
+		logger.info("Song Details successfully retrieved for Artist Name "+searchartistName);
 		}catch(SQLException se)
 		{
 			throw new SongException(se.getMessage()+" and problem in retrieving composer list.");

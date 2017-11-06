@@ -308,6 +308,9 @@ public class ClientArtist {
 					
 				else
 				{
+					System.out.println("---------------------------------------------------------------------------------");
+					System.out.printf("%-30s%-30s%-30s\n","Song ID","Song Name","Song Duration");
+					System.out.println("---------------------------------------------------------------------------------");
 					for(SongMasterDTO songMasterDTOList:songsList)
 						System.out.println(songMasterDTOList.displaySongsDetails());
 				}
@@ -328,11 +331,14 @@ public class ClientArtist {
 				System.out.println("Sorry!No artist has been found with this artistType"+artistType+" !!");
 				break;
 			}
-			else
+			else{
+				ArtistMasterDTO artist = new ArtistMasterDTO();
+				artist.disp();
 				for(ArtistMasterDTO ArtistMasterDTO:songService.searchArtistByType(artistType))
 				{
 					System.out.println(ArtistMasterDTO);
 				}
+			}
 			break;
 		}
 		}
