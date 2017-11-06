@@ -32,10 +32,12 @@ public class ClientMain {
 		String composerName="",choice7="";
 		String composerBorn="",composerDied="",composerCaeipiNumber="",composerMusicSocId="";
 		List<SongMasterDTO>songsList=new ArrayList();
-		char choice5;
+		char choice5='n';
 		String password;
 		String checkLogin="invalid";
 		DateTimeFormatter formatter=DateTimeFormatter.ofPattern("yyyy-MM-dd");
+		String logoutChoiceNew="";
+		String stringUserId="";
 		/************************************************************************************/
 		
 		/**********************Regex pattern initialization*******************/
@@ -65,10 +67,45 @@ public class ClientMain {
 				do
 				{
 					System.out.println("Enter Credentials");
-					System.out.print("UserId (no space in userId): ");
-					userId=sc.nextInt();
-					System.out.println("Password: ");
-					password=sc.next();
+					do
+					{
+						System.out.println("Enter  userId( must be a numeric value max 6 digit): ");
+						stringUserId=sc.next()+sc.nextLine();
+						choice7="";
+					//	if(Pattern.matches(patternName,composerName)==false)
+						if(stringUserId.matches("^[0-9]{1,6}$")==false)
+						{
+							try
+							{
+								throw new SongException("Please enter a valid userId. Only numeric value allowed max upto 6 digits.");
+							}catch(SongException e)
+							{
+								System.out.println(e.getMessage());
+								choice7="again";
+							}
+					}
+					}while(choice7=="again");
+					userId=Integer.parseInt(stringUserId);
+					
+					do
+					{
+						System.out.println("Password: ");
+						password=sc.next()+sc.nextLine();
+						choice7="";
+					//	if(Pattern.matches(patternName,composerName)==false)
+						if(password.matches("^[A-Za-z0-9_.]{1,25}$")==false)
+						{
+							try
+							{
+								throw new SongException("Please enter a valid password. Only alphanumeric characters underscore and dots allowed.");
+							}catch(SongException e)
+							{
+								System.out.println(e.getMessage());
+								choice7="again";
+							}
+					}
+					}while(choice7=="again");
+					
 					checkLogin="invalid";
 					try {
 						checkLogin=songService.checkLogin(userId,password);
@@ -212,19 +249,17 @@ public class ClientMain {
 								System.out.println("Please enter a valid choice.");
 								break;
 								
-								if(logoutChoiceNew.equals("a"))
-									logoutChoiceNew="";
-								else
-								{
-								System.out.println("Want to continue (y/n)");
-								choice5=sc.next().charAt(0);
-								count=0;
-								}
+								
 
 							}
+							if(logoutChoiceNew.equals("a"))
+								logoutChoiceNew="";
+							else
+							{
 							System.out.println("Want to continue (y/n)");
 							choice5=sc.next().charAt(0);
 							count=0;
+							}
 							
 							/***************end of do while loop for admin menu********************/
 						}while(choice5 =='y' || choice5=='Y');

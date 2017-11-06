@@ -24,14 +24,31 @@ public class ClientArtist {
 		String artistName="";
 		Date artistBornDate=null;
 		Date artistDiedDate=null;
-		String choiceArtistName,choiceArtistBirthDate,choiceArtistType,choiceDeathStatus;
+		String choiceArtistName,choiceArtistBirthDate,choiceArtistType,choiceDeathStatus,stringCheck="";
 		String artistBorn,artistDeathStatus,artistDied,artistType,choice7;
 		switch(userChoice)
 		{
 		case 8:
 			//Artist details for a specific artistID
-			System.out.println("Enter the artist Id:");
-			artistId=sc.nextInt();
+			do
+			{
+				System.out.println("Enter Artist Id: ");
+				stringCheck=sc.next()+sc.nextLine();
+				choice7="";
+			//	if(Pattern.matches(patternName,composerName)==false)
+				if(stringCheck.matches("^[0-9]{1,6}$")==false)
+				{
+					try
+					{
+						throw new SongException("Please enter a valid artistId. Only numeric value allowed max upto 6 digits.");
+					}catch(SongException e)
+					{
+						System.out.println(e.getMessage());
+						choice7="again";
+					}
+			}
+			}while(choice7=="again");
+			artistId=Integer.parseInt(stringCheck);
 			List<ArtistMasterDTO> artistMasterList=songService.searchArtist(artistId);
 			if(artistMasterList.isEmpty())
 			{
@@ -158,13 +175,26 @@ public class ClientArtist {
 		
 		case 9:
 			//Edit an existing artist details
-			System.out.println("Enter the artist Id you want to edit the details for: ");
-			artistId=sc.nextInt();
-			System.out.println("What do u want to edit?");
-			System.out.println("*********");
-			System.out.println("1.Death Date");
-			System.out.println("Enter choice: ");
-			int choiceArtist=sc.nextInt();
+			do
+			{
+				System.out.println("Enter Artist Id you want to edit: ");
+				stringCheck=sc.next()+sc.nextLine();
+				choice7="";
+			//	if(Pattern.matches(patternName,composerName)==false)
+				if(stringCheck.matches("^[0-9]{1,6}$")==false)
+				{
+					try
+					{
+						throw new SongException("Please enter a valid artistId. Only numeric value allowed max upto 6 digits.");
+					}catch(SongException e)
+					{
+						System.out.println(e.getMessage());
+						choice7="again";
+					}
+			}
+			}while(choice7=="again");
+			artistId=Integer.parseInt(stringCheck);
+			
 			List<ArtistMasterDTO> artistMasterDTOList=songService.searchArtist(artistId);
 			if(artistMasterDTOList.isEmpty())
 			{
@@ -173,6 +203,11 @@ public class ClientArtist {
 			}
 			else
 			{
+				System.out.println("What do u want to edit?");
+				System.out.println("*********");
+				System.out.println("1.Death Date");
+				System.out.println("Enter choice: ");
+				int choiceArtist=sc.nextInt();
 				ArtistMasterDTO artistMasterDTOEdit=new ArtistMasterDTO();
 				switch(choiceArtist)
 				{

@@ -139,8 +139,8 @@ public class ComposerDAO implements IComposerDAO {
 				composerMasterDTO.setUpdatedBy(rset.getInt(9));
 				composerMasterDTO.setUpdatedOn(rset.getDate(10));
 				composerMasterDTO.setComposerDelFlag(rset.getInt(11));
+				logger.info("Composer List extracted Successfully for composer with ID: "+rset.getInt(1));
 			}
-			logger.info("Composer List extracted Successfully for composer with ID: "+rset.getInt(1));
 		}catch(SQLException se)
 		{
 			throw new SongException(se.getMessage()+"Problem in checking login.");

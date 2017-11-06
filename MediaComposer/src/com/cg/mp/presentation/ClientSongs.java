@@ -21,7 +21,7 @@ public class ClientSongs {
 		Scanner sc = new Scanner(System.in);
 		int choice2,choice3,composerId=0;
 		char choice5;
-		String password;
+		String password,stringCheck="",choice7="";
 		DateTimeFormatter formatter=null;
 		switch(choice1)
 		{
@@ -31,13 +31,47 @@ public class ClientSongs {
 						System.out.println("********************************");
 						System.out.println("Associate Song to Composer");
 						System.out.println("********************************");
-						System.out.println("Enter Composer ID");
-						int cId=sc.nextInt();
-						composerSongAssoc.setComposerId(cId);
+						do
+						{
+							System.out.println("Enter  composer Id: ");
+							stringCheck=sc.next()+sc.nextLine();
+							choice7="";
+						//	if(Pattern.matches(patternName,composerName)==false)
+							if(stringCheck.matches("^[0-9]{1,6}$")==false)
+							{
+								try
+								{
+									throw new SongException("Please enter a valid composer Id. Only numeric value allowed max upto 6 digits.");
+								}catch(SongException e)
+								{
+									System.out.println(e.getMessage());
+									choice7="again";
+								}
+						}
+						}while(choice7=="again");
+						composerId=Integer.parseInt(stringCheck);
+						composerSongAssoc.setComposerId(composerId);
 
 
-						System.out.println("Enter song Id");
-						int sId = sc.nextInt();
+						do
+						{
+							System.out.println("Enter  song Id: ");
+							stringCheck=sc.next()+sc.nextLine();
+							choice7="";
+						//	if(Pattern.matches(patternName,composerName)==false)
+							if(stringCheck.matches("^[0-9]{1,6}$")==false)
+							{
+								try
+								{
+									throw new SongException("Please enter a valid song Id. Only numeric value allowed max upto 6 digits.");
+								}catch(SongException e)
+								{
+									System.out.println(e.getMessage());
+									choice7="again";
+								}
+						}
+						}while(choice7=="again");
+						int sId=Integer.parseInt(stringCheck);
 						composerSongAssoc.setSongId(sId);
 
 						try {
@@ -53,13 +87,47 @@ public class ClientSongs {
 						System.out.println("********************************");
 						System.out.println("Associate Song to Artist");
 						System.out.println("********************************");
-						System.out.println("Enter Artist ID");
-						int aId=sc.nextInt();
-						artistSongAssoc.setArtistId(aId);;
+						do
+						{
+							System.out.println("Enter Artist Id: ");
+							stringCheck=sc.next()+sc.nextLine();
+							choice7="";
+						//	if(Pattern.matches(patternName,composerName)==false)
+							if(stringCheck.matches("^[0-9]{1,6}$")==false)
+							{
+								try
+								{
+									throw new SongException("Please enter a valid artistId. Only numeric value allowed max upto 6 digits.");
+								}catch(SongException e)
+								{
+									System.out.println(e.getMessage());
+									choice7="again";
+								}
+						}
+						}while(choice7=="again");
+						int aId=Integer.parseInt(stringCheck);
+						artistSongAssoc.setArtistId(aId);
 
 
-						System.out.println("Enter song Id");
-						int songId = sc.nextInt();
+						do
+						{
+							System.out.println("Enter  song Id: ");
+							stringCheck=sc.next()+sc.nextLine();
+							choice7="";
+						//	if(Pattern.matches(patternName,composerName)==false)
+							if(stringCheck.matches("^[0-9]{1,6}$")==false)
+							{
+								try
+								{
+									throw new SongException("Please enter a valid song Id. Only numeric value allowed max upto 6 digits.");
+								}catch(SongException e)
+								{
+									System.out.println(e.getMessage());
+									choice7="again";
+								}
+						}
+						}while(choice7=="again");
+						int songId=Integer.parseInt(stringCheck);
 						artistSongAssoc.setSongId(songId);
 
 						try {
